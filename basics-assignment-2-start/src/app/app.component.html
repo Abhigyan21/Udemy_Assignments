@@ -1,0 +1,15 @@
+<div class="row container">
+
+  <div class="body-margin-top"></div>
+
+  <div class="col-xs-12">
+    <input [(ngModel)]="userName" (input)="checkUserName($event)" class="form-control" type="text" placeholder="Enter name here.">
+    <p class="divider"></p>
+
+    <button (click)="resetUserName()" [disabled]="isNameEmpty" type="button" name="button" class="btn btn-primary">Reset</button>
+    <p class="divider"></p>
+
+    <p [hidden]="isNameEmpty" class="alert alert-info">Hi! {{userName}}</p>
+  </div>
+
+</div>
